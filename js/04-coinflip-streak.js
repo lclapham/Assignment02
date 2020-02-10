@@ -1,5 +1,8 @@
 function screenPrint(numHeads) {
-    window.console.log("The Flip was Heads the streak is : " + numHeads);
+    if (numHeads === 0) {
+        window.console.log("The first flip was tails, you lose!")
+    } else
+        window.console.log("The Flip was Heads the streak is : " + numHeads);
 }
 
 function flipCoin() {
@@ -8,18 +11,16 @@ function flipCoin() {
     let numHeads = 0;
     do {
         coinFlip = Math.round(Math.random());
-        window.console.log("the coinflips was : " +coinFlip);
-        if (coinFlip === 0) {
-            window.console.log("in if");
+        if (coinFlip === 1 && i === 0) {
+            i++;
+        } else if (coinFlip === 0) {
             numHeads = numHeads + 1;
-            window.console.log (" ther are x many heads: ", numHeads);
-            screenPrint(numHeads);
         } else {
-            i = 1;
+            i++;
         }
     } while (i === 0);
+    
+    screenPrint(numHeads);
 }
 
-
-// RUN IT 
-flipCoin();
+flipCoin(); 
