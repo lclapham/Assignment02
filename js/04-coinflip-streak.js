@@ -20,5 +20,6 @@ function flipCoin() {
     } while (i === 0);
 }
 
+
 // RUN IT 
 flipCoin();

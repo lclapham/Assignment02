@@ -1,22 +1,58 @@
-function screenPrint (coinFilp){
-    if(coinFlip === 1){
-        shownValue = 'Tails';
-    } else {
-        shownValue = 'heads';
-    }
-    window.console.log(shownValue);
-}
-
-function flipCoin () {
+function flipCoin() {
     let coinFilp;
     let i = 0;
     do {
         coinFlip = Math.round(Math.random());
-        screenPrint();
+        screenPrint(coinFilp);
         i++;
     } while (i < 10);
 }
 
+// Display the results of the coin flip
+function screenPrint(coinFilp) {
+    let shownValue;
+    if (coinFlip === 1) {
+        shownValue = 'Tails';
+        displayCoin(shownValue);
+    } else {
+        shownValue = 'Heads';
+        displayCoin(shownValue);
+    }
+    window.console.log(shownValue);
+}
+
+function displayCoin(shownValue) {
+    document.getElementById("heads").style.visibility = "hidden";
+    document.getElementById("tails").style.visibility = "hidden";
+    window.console.log(shownValue);
+    if (shownValue === 'Heads') {
+        document.getElementById("heads").style.visibility = "visible";
+    } else {
+        document.getElementById("tails").style.visibility = "visible";
+
+    }
+
+}
+
+var handlers = {
+    buttonFlip: function () {
+        flipCoin();
+    }
+}
+
+
+
+// function displayCoin(shownValue) {
+//     var x = document.createElement("IMG");
+//     x.setAttribute("src", "images/"+shownValue+".png");
+//     x.setAttribute("width", "304");
+//     x.setAttribute("height", "228");
+//     x.setAttribute("alt", "coin");
+//     document.body.parentElement(x);
+
+//     appendChild(x);
+
+//   }
 // RUN IT 
 flipCoin();
 

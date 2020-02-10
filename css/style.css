@@ -1,0 +1,8 @@
+img {
+    visibility: hidden;
+    position: absolute;
+}
+
+button {
+    margin-top: 120px;
+}
