@@ -22,7 +22,7 @@ function screenPrint(coinFilp) {
     window.console.log(shownValue);
 }
 
-// Display the results of the coin flip with the image
+// Display the results of the coin flip with the image.  I went a little over and included an image to just see how it would work.
 function displayCoin(shownValue) {
     document.getElementById("heads").style.visibility = "hidden";
     document.getElementById("tails").style.visibility = "hidden";
