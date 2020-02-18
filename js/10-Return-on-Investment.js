@@ -17,7 +17,7 @@ do {
 } while (check === true);
 
 
-
+// Get the amount of the user wants to invest
 function getUserInvestment() {
     do {
         investment = (window.prompt("Enter Investment Amount as XXXX.XX"));
@@ -30,6 +30,7 @@ function getUserInvestment() {
     } while (check === false);
 }
 
+// Get the percentage that the user wants to test
 function getRate() {
     do {
         rate = parseFloat(window.prompt("Enter the intereset rate as XX.X"));
@@ -45,6 +46,7 @@ function getRate() {
     } while (check === false);
 }
 
+// Get the investment timeline in years
 function getYears() {
     do {
         years = (window.prompt("Enter number of years"));
@@ -60,6 +62,7 @@ function getYears() {
     } while (check === false);
 }
 
+// Calculate the future value
 function calcFuture(rate) {
     futureValue = investment;
 
@@ -68,6 +71,7 @@ function calcFuture(rate) {
     }
 }
 
+// Display the results of ROI test
 function showOutput(investment, rate, years, futureValue) {
     window.document.write("Investment amount: $" + investment + "<br>");
     window.document.write("Interest Rate" + rate + "<br>");
@@ -76,6 +80,7 @@ function showOutput(investment, rate, years, futureValue) {
 
 }
 
+// Find out if the user wants to do another ROI test.
 function goAgain(){
     check = window.prompt("Do you have another value you want to project?  (y/n)");
     if (check === "y"){

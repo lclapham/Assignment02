@@ -1,3 +1,4 @@
+// This function prints to console
 function screenPrint(numHeads) {
     if (numHeads === 0) {
         window.console.log("The first flip was tails, you lose!")
@@ -5,6 +6,7 @@ function screenPrint(numHeads) {
         window.console.log("The Flip was Heads the streak is : " + numHeads);
 }
 
+// This is the actual flip coin with randomness.
 function flipCoin() {
     let coinFilp;
     let i = 0;
@@ -23,4 +25,4 @@ function flipCoin() {
     screenPrint(numHeads);
 }
 
-flipCoin(); 
+flipCoin(); // Call the application

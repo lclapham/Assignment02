@@ -1,3 +1,4 @@
+// This is the application that will iterate whatever character the user wants make a pyramid.
 function draw(x, sym){
     let numSign = " ";
     for (var i = 0; i < x; i++) {
